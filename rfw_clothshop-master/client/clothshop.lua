@@ -11,6 +11,20 @@ for k,v in pairs(ClothShop) do
     end)
 end
 
+Citizen.CreateThread(function()
+	for k,v in ipairs(ClothShop) do
+		local blip = AddBlipForCoord(v)
+
+		SetBlipSprite (blip, 73)
+		SetBlipColour (blip, 51)
+		SetBlipAsShortRange(blip, true)
+
+		BeginTextCommandSetBlipName('STRING')
+		AddTextComponentSubstringPlayerName('Cloth Shop')
+		EndTextCommandSetBlipName(blip)
+	end
+end)
+
 function unloadClothShops()
     UnregisterActionZone("clothShop")
 end
