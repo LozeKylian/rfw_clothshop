@@ -149,7 +149,7 @@ function OpenClothShopThread()
                             RageUI.ButtonWithStyle(v.label.." "..i, nil, { RightLabel = "→→ Acheter ~r~"..v.price.."~s~ $" },  true ,function(_,h,s)
                                if s then
                                 TriggerEvent("skinchanger:getSkin", function(skin)
-                                    TriggerServerEvent("creator:SaveSkin", skin)
+                                        TriggerServerEvent("rFw:SavePlayerSkin", skin)
                                 end)
                                 local id = GetPlayerServerId(PlayerId())
                                 local rmv = v.price
