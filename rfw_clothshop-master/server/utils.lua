@@ -12,7 +12,7 @@ AddEventHandler(config.prefix.."RemoveMoney", function(id , rmv)
     end
 end)
 
-RegisterNetEvent(config.prefix.."SaveSkin")
-AddEventHandler(config.prefix.."SaveSkin", function(skin)
+RegisterNetEvent(config.prefix.."SavePlayerSkin")
+AddEventHandler(config.prefix.."SavePlayerSkin", function(skin)
     exports.rFw:SavePlayerSkin(source, skin)
 end)
