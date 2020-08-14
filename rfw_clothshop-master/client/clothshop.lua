@@ -127,7 +127,7 @@ function OpenClothShopThread()
                                 print(v.label)
                                 if s then
                                     TriggerEvent("skinchanger:getSkin", function(skin)
-                                        TriggerServerEvent("creator:SaveSkin", skin , identity)
+                                        TriggerServerEvent("rFw:SavePlayerSkin", skin)
                                     end)
                                     local id = GetPlayerServerId(PlayerId())
                                     local rmv = v.price
